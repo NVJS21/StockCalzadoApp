@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_almacen">
+
+    <fragment
+        android:id="@+id/nav_almacen"
+        android:name="com.euroformac.stockcalzadoapp.presentation.almacen.AlmacenFragment"
+        android:label="Almacén" />
+
+    <fragment
+        android:id="@+id/nav_tienda"
+        android:name="com.euroformac.stockcalzadoapp.presentation.tienda.TiendaFragment"
+        android:label="Tienda" />
+</navigation>

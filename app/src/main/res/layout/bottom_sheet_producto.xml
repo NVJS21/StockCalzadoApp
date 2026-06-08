@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_dark_grey"
+    android:padding="@dimen/margin_large">
+
+        <!-- Handle for dragging -->
+        <View
+            android:id="@+id/drag_handle"
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:background="@color/text_secondary"
+            android:backgroundTint="@color/text_secondary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Shoe Name / Model -->
+        <TextView
+            android:id="@+id/tv_bs_modelo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_bs_precio"
+            app:layout_constraintTop_toBottomOf="@id/drag_handle"
+            tools:text="Nike Dunk Low" />
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/tv_bs_precio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/toxic_green"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_bs_modelo"
+            tools:text="110€" />
+
+        <!-- Description/Color -->
+        <TextView
+            android:id="@+id/tv_bs_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bs_modelo"
+            tools:text="Color: Panda (Blanco/Negro)" />
+
+        <!-- Stock Section Title -->
+        <TextView
+            android:id="@+id/tv_bs_stock_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:text="ESCOGE TU TALLA"
+            android:textAppearance="@style/TextAppearance.StockCalzado.Headline"
+            android:textSize="18sp"
+            android:textColor="@color/street_orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bs_color" />
+
+        <!-- Recycler for Sizes (Grid) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tallas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintTop_toBottomOf="@id/tv_bs_stock_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_height="100dp" />
+
+        <!-- Action Button: Request from Warehouse -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_solicitar_almacen"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="SOLICITAR AL ALMACÉN"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/bg_black"
+            app:backgroundTint="@color/neon_purple"
+            app:cornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/rv_tallas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

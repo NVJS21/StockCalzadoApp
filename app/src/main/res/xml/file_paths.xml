@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Cubre requireContext().cacheDir — usado por createTempPhotoUri() -->
+    <cache-path name="my_cache" path="." />
+    <!-- Cubre requireContext().filesDir — usado para copiar imágenes definitivas -->
+    <files-path name="my_files" path="." />
+    <!-- Cubre almacenamiento temporal de la foto nueva -->
+    <files-path name="product_images" path="product_images/" />
+    <!-- Cubre cache externa (algunos dispositivos) -->
+    <external-cache-path name="external_cache" path="." />
+    <!-- Cubre almacenamiento externo de la app -->
+    <external-files-path name="external_files" path="." />
+</paths>

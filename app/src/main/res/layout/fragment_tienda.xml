@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    android:padding="@dimen/margin_normal">
+
+    <!-- Header / Title -->
+    <TextView
+        android:id="@+id/tv_tienda_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIENDA"
+        android:textAppearance="@style/TextAppearance.StockCalzado.Headline"
+        android:textColor="@color/neon_purple"
+        android:letterSpacing="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_normal"/>
+
+    <!-- Instruction Subtitle -->
+    <TextView
+        android:id="@+id/tv_tienda_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Escanea el código de barras de la zapatilla en exposición para conocer el stock real en almacén."
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_tienda_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Huge Central Scanner Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_escanear_modelo"
+        style="@style/Widget.StockCalzado.MassiveButton"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:text="ESCANEAR MODELO"
+        android:textColor="@color/bg_black"
+        app:backgroundTint="@color/toxic_green"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:iconGravity="top"
+        app:iconSize="64dp"
+        app:iconTint="@color/bg_black"
+        app:iconPadding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_tienda_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_introduccion_manual"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_introduccion_manual"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="INTRODUCCIÓN MANUAL"
+        android:textColor="@color/neon_purple"
+        app:strokeColor="@color/neon_purple"
+        app:layout_constraintTop_toBottomOf="@id/btn_escanear_modelo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Bottom Decorative "Hip-Hop" Element -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOCK /// REAL"
+        android:fontFamily="sans-serif-black"
+        android:textSize="32sp"
+        android:textColor="@color/bg_card"
+        android:alpha="0.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
